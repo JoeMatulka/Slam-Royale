@@ -1,5 +1,5 @@
 # Slam-Royale
-Code used to create game Slam Royale
+Code used to create the game Slam Royale
 
 You'll notice that some of the code references prefabs, textures, sounds, etc. I stripped those out.
 
