@@ -25,8 +25,12 @@ ExportedObj/
 *.opendb
 
 # Unity3D generated meta files
-*.pidb.meta
-*.pdb.meta
+*.meta
+
+# Unity Specifc Objects
+*.prefab
+*.unity
+*.controller
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
@@ -34,3 +38,8 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+#3D models and Textures
+*.fbx
+*.blend
+*.xcf
