@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
-using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,6 +33,9 @@ public class GameManager : MonoBehaviour
         ResourceManager.Instance.LoadResources();
         SoundManager.Instance.LoadSounds();
         AdManager.Instance.InitializeAds();
+
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 30;
     }
 
     // Use this for initialization
@@ -191,7 +193,7 @@ public class GameManager : MonoBehaviour
                 m_enemies.RemoveAt(i);
                 Destroy(enemy.gameObject);
                 m_enemyCount = m_enemies.Count;
-
+                player.Heal(50);
                 int newMaxEnemies = Mathf.RoundToInt(Score / 1.25f);
                 maxNumOfEnemies = newMaxEnemies >= 1 ? newMaxEnemies : 1;
                 return;
@@ -229,7 +231,7 @@ public class GameManager : MonoBehaviour
 
     private void FinishDynamicDamageView()
     {
-        SoundManager.Instance.PlayGameMusic(true);
+        SoundManager.Instance.PlayGameMusic(GameDataManager.Instance.IsSound);
         GameSlowMo = false;
         gameCamera.ResetCameraToGameView();
         gameHUD.Show();
