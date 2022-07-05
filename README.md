@@ -1,5 +1,5 @@
 # Slam-Royale
-Code used to create the game Slam Royale
+Code used to create the game Slam Royale (game can be found here: https://play.google.com/store/apps/details?id=com.DreaminBohemian.SlamRoyale&hl=en_US&gl=US)
 
 You'll notice that some of the code references prefabs, textures, sounds, etc. I stripped those out.
 
